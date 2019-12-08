@@ -1,0 +1,23 @@
+$lineColor:#d7d7d7;
+.viewtable {
+    display: table;
+    width: 100%;
+}
+@mixin viewtableobject {
+    display: table-cell;
+    vertical-align: top;
+    float: none;
+}
+.viewtable .left-content { 
+    @include viewtableobject; 
+    width:450px;
+    padding-right: 2rem;
+    border-right: 1px solid $lineColor;
+}
+ .viewtable .right-content {
+    @include viewtableobject; 
+    display: table-cell;
+    vertical-align: top;
+    float: none;
+ }
+ 
