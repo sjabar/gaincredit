@@ -1,22 +1,24 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import InputGroup from 'react-bootstrap/InputGroup';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import FormControl from 'react-bootstrap/FormControl';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 import './App.scss'
 export class SearchBar extends React.Component {
   render() {
      return (
-         <div className="input-group">
-            <input type="text" className="form-control" aria-label="Text input with dropdown button"/>
-            <div className="input-group-append">
-                <button className="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
-                <div className="dropdown-menu">
-                <a className="dropdown-item" href="#">Action</a>
-                <a className="dropdown-item" href="#">Another action</a>
-                <a className="dropdown-item" href="#">Something else here</a>
-                <div role="separator" className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Separated link</a>
-                </div>
-            </div>
-        </div>
+      <InputGroup className="mb-3" size="sm">
+     <FormControl
+      placeholder="Name,ID"
+      aria-label="Recipient's username"
+      aria-describedby="basic-addon2"
+    />
+    <InputGroup.Append>
+      <Button variant="outline-secondary">GO</Button>
+    </InputGroup.Append>     
+    </InputGroup>
      );
   }
 }

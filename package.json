@@ -11,6 +11,7 @@
     "css-loader": "^3.2.0",
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
     "react-scripts": "3.2.0",
     "sass-loader": "^8.0.0",
@@ -20,7 +21,16 @@
     "webpack-dev-server": "^3.9.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --hot --inline"
+    "start": "webpack-dev-server --hot --inline",
+    "test": "jest"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "/node_modules/(?!@babel).+\\.js$"
+    ],
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,8 +48,14 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^7.1.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "clean-webpack-plugin": "^3.0.0",
-    "html-webpack-plugin": "^3.2.0"
+    "enzyme": "^3.10.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.9.0",
+    "react-addons-test-utils": "^15.6.2"
   }
 }
